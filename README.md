@@ -2,7 +2,7 @@
 
 ## Variables
 ```php
-$wrong_variable = "Dont't name variables like that. It is called snake cases and in PHP it is not recommended to use";
+$wrong_variable_name = "Don't separate words by underscores. It is not recommended to use - at least in PHP";
 $firstname = 'Dominik';
 $lastname = 'Klapuch';
 $programmingLanguage = 'php'; // Notice the camelCase naming
@@ -24,7 +24,7 @@ $name = $name . ' Klapuch'; // The line above is same as the current one
 $a = 10;
 $a += 5; // The shortcut may be applied for all operators (+=, -=, *=, .=, ...)
 $a = 1;
-$a += 1; // I want to increment value by one
+$a += 1; // I want to increment value by one - $a is now 2
 ++$a; // The line above is same as the current one
 --$a; // Decrement, same as $a -= 1; 
 ```
@@ -35,12 +35,12 @@ In php we have several data types, which are built in the language. The types ar
 ```php
 $integer = 10;
 $string = 'string';
-$string = "string"; // Same as the line above. Use ' instead of "
+$string = "string"; // Same as the line above. Prefer using ' instead of "
 $float = 0.5;
 $boolean = true;
 $boolean = false;
 $array = [10, 20, 30];
-$array = array(10, 20, 30); // Same as the line above. Use [] instead of array
+$array = array(10, 20, 30); // Same as the line above. Prefer using [] over array()
 ```
 #### Array
 ```php
@@ -49,9 +49,9 @@ $books = [0 => 'House of leaves', 1 => 'The Shining', 2 => 'It']; // Same as the
 echo $books[0]; // Will output: House of leaves
 echo $books[1]; // Will output: The Shining
 echo $books[2]; // Will output: It
-echo $books[3]; // Error. On index 3 there is no value
+echo $books[3]; // Error.
 /**
-* But we don't want to access the books through indexes. I would like to access each book by ISBN
+* We don't want to access the books through indexes. I would like to access one particular book by ISBN
 * By the way, this is called multiline comment and it is more readable than single line comment (//)
 */
 // ISBNs are simplified
@@ -60,7 +60,7 @@ echo $books['12-23']; // Will output: House of leaves
 // Indexes must be unique, that's the reason why the array is indexed by ISBNs.
 // What if there would be same indexes? Let's see.
 $books = ['12-23' => 'House of leaves', '12-23' => 'The Shining', '22-99' => 'It'];
-// In fact, the array of books has now only two items. First book House of leaves has been overwritten by The Shining
+// In fact, the array of books has only two items. First book House of leaves has been overwritten by The Shining
 echo $books['12-23']; // Will output: The Shining
 ```
 
